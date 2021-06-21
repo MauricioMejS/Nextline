@@ -1,0 +1,21 @@
+@import "./_variables.scss";
+@import "./_colors.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $defaultFontFamily;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    315deg,
+    $background-color,
+    $background-color-light 100%
+  );
+  min-height: 100vh;
+}

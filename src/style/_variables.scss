@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+$defaultFontFamily: "DM Sans", sans-serif;
+
+// Responsive down size
+$media-breackpoint-down-xs: 413.98px;
+$media-breackpoint-down-sm: 573.98px;
+$media-breackpoint-down-md: 767.98px;
+$media-breackpoint-down-lg: 991.98px;
+$media-breackpoint-down-xl: 1199.98px;
+
+// Responsive up size
+$media-breackpoint-up-xs: 320px;
+$media-breackpoint-up-sm: 576px;
+$media-breackpoint-up-md: 768px;
+$media-breackpoint-up-lg: 992px;
+$media-breackpoint-up-xl: 1200px;

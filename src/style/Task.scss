@@ -1,0 +1,93 @@
+@import "./_variables.scss";
+@import "./_colors.scss";
+
+.task-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 8px 0 0 8px;
+  border: 2px solid $border-light;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: $font-light;
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  .edit {
+    border: 2px solid $border-light;
+  }
+
+  .task-button.edit {
+    background-color: $background-light;
+    cursor: pointer;
+    padding: 16px 22px;
+  }
+}
+
+.task-input-update {
+  padding: 14px 32px 14px 16px;
+  border-radius: 8px 0 0 8px;
+  border: 2px solid $border-dark;
+  outline: none;
+  width: 250px;
+  background: transparent;
+  color: $font-dark;
+}
+
+.task-button-update {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: $background-dark;
+  color: $font-light;
+  text-transform: capitalize;
+}
+
+.task-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: $background-light;
+  color: $font-light;
+  text-transform: capitalize;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: $font-light;
+  background-color: #3c87de;
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: $font-light;
+}
+
+.edit-icon {
+  color: $font-light;
+}
