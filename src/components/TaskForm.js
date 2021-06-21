@@ -26,11 +26,8 @@ export default function FromTask({ setReloadTask }) {
     });
   };
 
-  const handleSubmit = () => {
-    setInput("");
-  };
   return (
-    <form onSubmit={handleSubmit} className="task-form">
+    <form className="task-form">
       <input
         placeholder="Agregar Titulo"
         value={input.title}

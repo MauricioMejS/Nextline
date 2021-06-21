@@ -80,6 +80,8 @@ export default function Task({ tasks, removeTask, setReloadTask, reloadTask }) {
   ));
 }
 
+
+//Agrega un elemento
 function EditingModal({
   setEdit,
   tasks,
@@ -107,7 +109,7 @@ function EditingModal({
             };
 
             console.log(newTask);
-            
+
             updateTaskApi(newTask).then((response) => {
               console.log(response);
               setReloadTask(true);
