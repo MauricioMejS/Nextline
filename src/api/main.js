@@ -1,3 +1,5 @@
+
+//Obtiene las Tareas
 export function getTaskApi() {
   const url = `https://ecsdevapi.nextline.mx/vdev/tasks-challenge/tasks?token=Mauricio`;
 
@@ -22,6 +24,7 @@ export function getTaskApi() {
     });
 }
 
+//Agrega Tareas
 export function addTaskApi(data) {
   var formBody = [];
   for (var property in data) {
@@ -56,6 +59,8 @@ export function addTaskApi(data) {
     });
 }
 
+
+//Elimina Tareas
 export function deleteTaskApi(id) {
   const url = `https://ecsdevapi.nextline.mx/vdev/tasks-challenge/tasks/${id}?token=Mauricio`;
 
@@ -80,6 +85,8 @@ export function deleteTaskApi(id) {
     });
 }
 
+
+//Actualiza Tareas
 export function updateTaskApi(data) {
   var formBody = [];
   for (var property in data) {

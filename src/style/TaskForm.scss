@@ -1,6 +1,24 @@
 @import "./_variables.scss";
 @import "./_colors.scss";
 
+@media (max-width: $media-breackpoint-up-sm) {
+  .container-app {
+    border-radius: 0px !important;
+    height: 100% !important;
+  }
+  .task-form {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+  }
+  .task-input {
+    width: 100% !important;
+    border-radius: 0px !important;
+  }
+  .task-button {
+    border-radius: 0px !important;
+  }
+}
 .container-app {
   display: flex;
   flex-direction: column;
@@ -18,4 +36,44 @@
     color: #fff;
     font-size: 24px;
   }
+}
+
+.task-input {
+  padding: 14px 32px 14px 16px;
+  border: 2px solid $border-light;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: $font-light;
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  .edit {
+    border: 2px solid $border-light;
+  }
+
+  .task-button.edit {
+    background-color: $background-light;
+    cursor: pointer;
+    padding: 16px 22px;
+  }
+}
+
+.task-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: $background-light;
+  color: $font-light;
+  text-transform: capitalize;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

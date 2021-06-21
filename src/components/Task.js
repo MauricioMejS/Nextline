@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+//Iconos
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 import { RiTaskLine } from "react-icons/ri";
+//Api
 import { updateTaskApi } from "../api/main";
-
+//Estilos
 import "../style/Task.scss";
 
 export default function Task({ tasks, removeTask, setReloadTask, reloadTask }) {
+  //Estados para la edicion
   const [edit, setEdit] = useState("");
   const [status, setStatus] = useState(0);
-
   const [onEditing, setOnEditing] = useState(false);
 
   return tasks.map((tasks) => (
@@ -105,7 +107,7 @@ function EditingModal({
             };
 
             console.log(newTask);
-
+            
             updateTaskApi(newTask).then((response) => {
               console.log(response);
               setReloadTask(true);

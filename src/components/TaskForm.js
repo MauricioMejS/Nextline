@@ -1,8 +1,11 @@
-import moment from "moment";
 import React, { useState } from "react";
+//Librerias
+import moment from "moment";
+//Api
 import { addTaskApi } from "../api/main";
 
 export default function FromTask({ setReloadTask }) {
+  //Objeto de las propiedades
   const [input, setInput] = useState({
     title: "",
     comments: "Prueba",
@@ -12,6 +15,7 @@ export default function FromTask({ setReloadTask }) {
     due_date: moment().format("YYYY-MM-DD"),
   });
 
+  //Consume la api
   const addTask = (e) => {
     e.preventDefault();
     addTaskApi(input).then((response) => {

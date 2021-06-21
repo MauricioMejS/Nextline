@@ -1,38 +1,27 @@
 @import "./_variables.scss";
 @import "./_colors.scss";
 
-.task-input {
-  padding: 14px 32px 14px 16px;
-  border-radius: 8px 0 0 8px;
-  border: 2px solid $border-light;
-  outline: none;
-  width: 320px;
-  background: transparent;
-  color: $font-light;
-
-  &::placeholder {
-    color: $secondary-color;
+@media (max-width: $media-breackpoint-up-sm) {
+  .task-input-update {
+    width: 100% !important;
   }
-
-  .edit {
-    border: 2px solid $border-light;
-  }
-
-  .task-button.edit {
-    background-color: $background-light;
-    cursor: pointer;
-    padding: 16px 22px;
+  .task-button-update {
+    width: 100% !important;
+    border-radius: 0px !important;
   }
 }
 
 .task-input-update {
   padding: 14px 32px 14px 16px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 0px;
   border: 2px solid $border-dark;
   outline: none;
-  width: 250px;
+  width: 200px;
   background: transparent;
-  color: $font-dark;
+  color: $font-light;
+  &::placeholder {
+    color: $font-light;
+  }
 }
 
 .task-button-update {
@@ -42,17 +31,6 @@
   cursor: pointer;
   outline: none;
   background-color: $background-dark;
-  color: $font-light;
-  text-transform: capitalize;
-}
-
-.task-button {
-  padding: 16px;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  outline: none;
-  background-color: $background-light;
   color: $font-light;
   text-transform: capitalize;
 }

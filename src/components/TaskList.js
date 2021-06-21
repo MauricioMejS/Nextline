@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+//Componentes
 import TaskForm from "./TaskForm";
 import Task from "./Task";
-import { getTaskApi, deleteTaskApi, updateTaskApi } from "../api/main";
+//Api
+import { getTaskApi, deleteTaskApi } from "../api/main";
 
 import "../style/TaskForm.scss";
 
@@ -9,6 +11,7 @@ export default function TaskList() {
   const [tasks, setTasks] = useState([]);
   const [reloadTask, setReloadTask] = useState(false);
 
+  //Conusme la Api
   useEffect(() => {
     getTaskApi().then((response) => {
       setTasks(response);
@@ -16,6 +19,7 @@ export default function TaskList() {
     });
   }, [reloadTask]);
 
+  //Consume la APi
   const removeTask = (id) => {
     deleteTaskApi(id).then((response) => {
       console.log(response);
